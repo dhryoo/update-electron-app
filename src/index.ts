@@ -224,7 +224,7 @@ function validateInput(opts: IUpdateElectronAppOptions) {
       );
 
       assert(
-        updateSource.host && isURL(updateSource.host) && updateSource.host.startsWith('https:'),
+        updateSource.host && isURL(updateSource.host) ,
         'host must be a valid HTTPS URL',
       );
       break;
@@ -233,7 +233,7 @@ function validateInput(opts: IUpdateElectronAppOptions) {
       assert(
         updateSource.baseUrl &&
           isURL(updateSource.baseUrl) &&
-          updateSource.baseUrl.startsWith('https:'),
+          updateSource.baseUrl.startsWith('http:'),
         'baseUrl must be a valid HTTPS URL',
       );
       break;
